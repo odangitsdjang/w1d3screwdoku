@@ -59,8 +59,9 @@ class SudokuGame
     puts "Congratulations, you win!"
   end
 
+  # return true if whole board is solved
   def solved?
-    board.solved?
+      board.terminate?
   end
 
   def valid_pos?(pos)
