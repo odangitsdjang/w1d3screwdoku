@@ -59,8 +59,11 @@ class SudokuGame
     puts "Congratulations, you win!"
   end
 
+  # return true if whole board is solved
   def solved?
-    board.solved?
+    board.rows.all? do |row|
+      board.solved_set?(row)
+    end
   end
 
   def valid_pos?(pos)
