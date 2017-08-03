@@ -1,5 +1,4 @@
 require_relative "tile"
-
 class Board
   def self.empty_grid
     Array.new(9) do
@@ -13,7 +12,6 @@ class Board
       nums = row.split("").map { |char| Integer(char) }
       nums.map { |num| Tile.new(num) }
     end
-
     self.new(tiles)
   end
 
