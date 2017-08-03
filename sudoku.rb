@@ -61,9 +61,7 @@ class SudokuGame
 
   # return true if whole board is solved
   def solved?
-    board.rows.all? do |row|
-      board.solved_set?(row)
-    end
+      board.terminate?
   end
 
   def valid_pos?(pos)
